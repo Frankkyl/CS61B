@@ -28,7 +28,8 @@ public class Lecture6 {
             System.out.println(args[i]);// show the things u type by command line
         }
     }
-
+    public final static int FEBRVARY = 2;
+    //For any array x, x.length is a filed, so that's why u cant change it
     class Echo {
 
     }
