@@ -33,7 +33,7 @@ class OpenCommercial {
 
     /* Replace this comment with your solution.  */
 
-        String u="http://www."+inputLine+".com";//"http://" is must, only "www" would not help
+        String u="http://www."+inputLine+".com";//"http://" is must, only "www" would not help, and show no protocol error
         URL url=new URL(u);
         //read the web address
         InputStream isu=url.openStream();
