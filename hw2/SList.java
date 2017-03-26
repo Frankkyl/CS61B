@@ -14,7 +14,7 @@ public class SList {
     }
 
     public void insertFront(Object item){
-        head=new SListNode(item,head); ??
+        //head=new SListNode(item,head); ??
         size++;
     }
 }
