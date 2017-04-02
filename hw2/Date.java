@@ -143,7 +143,7 @@ public class Date {
      * @return true if and only if this Date is before d.
      */
     public boolean isBefore(Date d) {
-        if(difsinceZero(this)>difsinceZero(d)){
+        if(difsinceZero(this)>=difsinceZero(d)){
             return false;
         }else{
             return true;
