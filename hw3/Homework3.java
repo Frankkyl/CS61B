@@ -26,7 +26,7 @@ public class Homework3 {
     public static void smoosh(int[] ints) {
         // Fill in your solution here.  (Ours is fourteen lines long, not counting
         // blank lines or lines already present in this file.)
-        /*int[] newarray=new int[ints.length];//since we only replace it when i != startset,
+        int[] newarray=new int[ints.length];//since we only replace it when i != startset,
                                             // so it would be ok, if we replace it directly, instead of we create a new array
         int startset=0;
         newarray[0]=ints[0];
@@ -39,8 +39,13 @@ public class Homework3 {
         for(int i=startset+1;i<ints.length;i++){//this should be start from startset+1, not startset
             newarray[i]=-1;
         }
-        ints=newarray;*/
-        int startset=0;
+
+        for(int i = 0; i <ints.length; i ++){// "=" or clone would only copy the ref address,
+                                            // u have to loop the new array and set new value for each item.
+            ints[i] = newarray[i];
+        }
+       // ints=newarray;
+        /*int startset=0;
         for(int i=1;i<ints.length;i++){
             if(ints[i]!=ints[startset]){
                 ints[startset+1]=ints[i];
@@ -49,7 +54,7 @@ public class Homework3 {
         }
         for(int i=startset+1;i<ints.length;i++){//this should be start from startset+1, not startset
             ints[i]=-1;
-        }
+        }*/
         //System.out.println(stringInts(ints));
     }
 

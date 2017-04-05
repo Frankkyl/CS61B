@@ -134,9 +134,11 @@ public class SList {
         while(currentNode!=null){
             while( currentNode.next!=null && currentNode.item.equals(currentNode.next.item)){
                 currentNode.next=currentNode.next.next;
+                size--;// dont forget the reset size, or u might have error in future
             }
             currentNode=currentNode.next;//reset the current
         }
+        //System.out.println(size);
     }
 
     /**
@@ -156,6 +158,7 @@ public class SList {
         while (currentNode != null) {
             currentNode.next = new SListNode(currentNode.item, currentNode.next);
             currentNode = currentNode.next.next;
+            size++;// dont forget the reset size, or u might have error in future
         }
     }
 
