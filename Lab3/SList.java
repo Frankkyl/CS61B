@@ -29,6 +29,12 @@ package Lab3;
             tail=null;
         }
 
+        public SList(int a, int b, int c) {
+            head = new SListNode(a, new SListNode(b, new SListNode(c)));
+            tail = new SListNode(c);
+            size = 3;
+        }
+
         /**
          *  isEmpty() indicates whether the list is empty.
          *  @return true if the list is empty, false otherwise.
@@ -146,6 +152,34 @@ package Lab3;
             lst3.insertEnd(15);
             lst3.insertFront(3);
             System.out.println(lst3);
+
+            System.out.println("check");
+
+            SList s = new SList();
+            s.insertEnd(6);
+            s.insertEnd(9);
+            s.insertEnd(12);
+
+            System.out.println(s);
+            s.insertEnd(15);
+            s.insertEnd(17);
+            s.insertEnd(18);
+            System.out.println(s);
+            s.insertFront(3);
+            s.insertFront(21);
+
+            System.out.println(s);
+
+
+            SList ss = new SList(6,9,12);//by doing this, insetend not work
+            System.out.println(ss);
+            ss.insertEnd(15);
+            ss.insertEnd(17);
+            ss.insertEnd(18);
+            System.out.println(ss);
+            ss.insertFront(25);
+            ss.insertEnd(29);
+            System.out.println(ss);
         }
 
 
